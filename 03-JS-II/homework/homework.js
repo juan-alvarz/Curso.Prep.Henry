@@ -27,14 +27,12 @@ function conection(status) {
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   switch(status){
     case 1:
-      console.log('Online');
-      break;
+      return 'Online';
     case 2:
-      console.log('Away');
-      break;
+      return 'Away';
     default:
-      console.log('Offline');
-  }
+      return "Offline";
+    }
 }
 
 function saludo(idioma) {
@@ -46,16 +44,13 @@ function saludo(idioma) {
   // Tu código:
   switch(idioma){
     case 'aleman':
-      console.log('Guten Tag!');
-      break;
+      return 'Guten Tag!';
     case 'mandarin':
-      console.log('Ni Hao!')
-      break;
+      return 'Ni Hao!';
     case 'ingles':
-      console.log('Hello!');
-      break;
+      return 'Hello!';
     default:
-      console.log('Hola!');
+      return 'Hola!';
   }
 }
 
@@ -69,19 +64,15 @@ function colors(color) {
   //Usar el statement Switch.
   switch(color){
     case 'blue':
-      console.log('This is blue')
-      break;
+      return 'This is '+ color;
     case 'red':
-      console.log('This is red')
-      break;
+      return 'This is '+ color;
     case 'green':
-      console.log('This is green')
-      break;
+      return 'This is '+ color;
     case 'orange':
-      console.log('This is orange')
-      break;
+      return 'This is '+ color;
     default:
-      console.log('Color not found')
+      return 'Color not found';
     }
 }
 
@@ -126,7 +117,7 @@ function fizzBuzz(numero) {
   } else if (numero%3 === 0){
     return "fizz"
   } else {return numero}
-  
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -136,19 +127,16 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if (num1>num2 && num1>num3 && num1>0){
-    console.log('Número 1 es mayor y positivo')
+  if (num1 === 0 || num2 === 0 || num3 === 0){
+    return "Error";
   }
   else if (num1<0 || num2<0 || num3<0){
-    console.log('Hay negativos')
-  }
-  else if(num3>num1 && num3>num2){
-    console.log(num3+1)
-  }
-  else if(num1 === 0 || num2 === 0 || num3 === 0){
-    console.log('Error')
-  } else {console.log(false)
-  }
+    return "Hay negativos"
+  }else if (num1>num2 && num1>num3 && num1>0){
+    return "Número 1 es mayor y positivo";
+  } else if (num3>num1 && num3>num2){
+    return num3+1
+  } else {return false}
 }
 
 function esPrimo(numero) {
@@ -165,8 +153,8 @@ function esPrimo(numero) {
       }
   }
   if (contador === 2){
-      console.log(numero+' es número primo')
-  } else {console.log(numero+' no es número primo')}
+      return true
+  } else {return false}
 }
 
 function esVerdadero(valor){
@@ -174,9 +162,9 @@ function esVerdadero(valor){
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if (valor === true){
-    console.log('Soy verdadero')
+    return 'Soy verdadero'
   }
-  else {console.log('Soy falso')}
+  else {return 'Soy falso'}
 
 }
 
@@ -185,7 +173,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
   let tabla = []
-  for (i = 1; i<= 10 ; i++){
+  for (i = 0; i<= 10 ; i++){
     tabla.push(6*i)
   }
   return tabla
@@ -213,7 +201,7 @@ function doWhile(numero) {
     numero = numero + 5
     cont++
   }
-  while (cont <= 8)
+  while (cont < 8)
   return numero
 }
 
