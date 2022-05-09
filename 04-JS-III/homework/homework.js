@@ -218,7 +218,7 @@ function todosIguales(arreglo) {
     } else {return false}
     console.log(cont)
     console.log(n)
-  
+    
 } 
 
 
