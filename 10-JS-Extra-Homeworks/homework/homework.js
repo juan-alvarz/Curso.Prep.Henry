@@ -26,7 +26,7 @@ function numberOfCharacters(string) {
   //Escribe tu código aquí
   clave = [' ']
   for (let i=0; i<string.length; i++){
-    clave.push(str[i])
+    clave.push(string[i])
   }
   dict = {}
   for (let i=0; i<clave.length; i++){
@@ -47,6 +47,27 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  mayus = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
+  minus = mayus.toLowerCase()
+  newStr = ''
+
+  for (striter=0; striter<s.length; striter++){
+    for (mayusiter=0; mayusiter<mayus.length; mayusiter++){
+      if (s[striter] === mayus[mayusiter]){
+        newStr += s[striter]
+      }
+    }
+  }
+  
+  for (striter=0; striter<s.length; striter++){
+    for (minusiter=0; minusiter<minus.length; minusiter++){
+      if (s[striter] === minus[minusiter]){
+        newStr += s[striter]
+      }
+    }
+  }
+
+  return newStr
 }
 
 
